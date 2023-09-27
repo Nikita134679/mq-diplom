@@ -9,33 +9,37 @@
     <title>My project</title>
 </head>
 <body>
-<div class="visually-hidden"> <!--Начальный class для этображения всплывающего окна: popup-wrapper-->
-  <div class="popup-container">
+<div class="popup-wrapper visually-hidden">
+  <form class="popup-container">
     <img src="svg/form-x.svg" class="close-popup" alt="крестик">
     <h2 class="popup-title">Ваш фидбэк</h2>
-    <span class="popup-subtitle">Как часто вы заходите на сайт?</span>
-    <select class="input-select">
-      <option selected>Почти каждый день</option>
-      <option>Раз в несколько дней</option>
-      <option>Раз в несколько недель</option>
-      <option>Несколько раз в год</option>
-    </select>
-    <span class="popup-subtitle">Вы подписаны на e-mail рассылку?</span>
-    <div class="popup-button-radio">
-      <label>
-        <input class="label-input" type="radio" name="radio-group">
-        <span class="label-text">Да</span>
-      </label>
-      <label>
-        <input class="label-input" type="radio" name="radio-group"> 
-        <span class="label-text">Нет</span>
-      </label>
-    </div>
+    <label>
+      <span class="popup-subtitle">Как часто вы заходите на сайт?</span>
+      <select class="input-select">
+        <option selected>Почти каждый день</option>
+        <option>Раз в несколько дней</option>
+        <option>Раз в несколько недель</option>
+        <option>Несколько раз в год</option>
+      </select>
+    </label>
+    <label>
+      <span class="popup-subtitle">Вы подписаны на e-mail рассылку?</span>
+      <div class="popup-button-radio">
+        <label>
+          <input class="label-input" type="radio" name="radio-group">
+          <span class="label-text">Да</span>
+        </label>
+        <label>
+          <input class="label-input" type="radio" name="radio-group"> 
+          <span class="label-text">Нет</span>
+        </label>
+      </div>
+    </label>
     <span class="popup-subtitle">Расскажите, какой контент вы бы хотели видеть на нашем сайте?</span>
     <textarea class="area-input" placeholder="Может, больше рецептов?"> 
     </textarea>
     <button type="submit" class="popup-button">Отправить</button>
-  </div>
+  </form>
 </div>
 <header class="header">
   <div class="header-container">
@@ -290,14 +294,16 @@
           srcset="images/shop-item-mobile1.jpg">
         <img class="image-item" src="images/shop-item-desk1.jpg" srcset="images/shop-item-desk1.jpg"/>
       </picture>
-      <h3 class="product-title">Подушка на диван</h3>
-      <span class="protuct-text">Набор из двух подушек с мождными принтами. Видео о создании <a href="#0" class="product-text-link">здесь</a>.</span>
-      <div class="price-container">
-        <div class="price-item">
-          <span class="price-sale">1000 &#8381</span>
-          <span class="price">800 &#8381</span>
+      <div class="border-item border-1">
+        <h3 class="product-title">Подушка на диван</h3>
+        <p class="protuct-text">Набор из двух подушек с мождными принтами. Видео о создании <a href="#0" class="product-text-link">здесь</a>.</p>
+        <div class="price-container">
+          <div class="price-item">
+            <span class="price-sale">1000 &#8381</span>
+            <span class="price">800 &#8381</span>
+          </div>
+          <a href="#" class="price-button">В магазин</a>
         </div>
-        <button class="price-button" type="submit">В магазин</button>
       </div>
     </div>
     <div class="product-item">
@@ -313,13 +319,15 @@
           srcset="images/shop-item-mobile2.jpg">
         <img class="image-item" src="images/shop-item-desk2.jpg" srcset="images/shop-item-desk2.jpg"/>
       </picture>
-      <h3 class="product-title">Кукла &#171Зайчик&#187</h3>
-      <span class="protuct-text">Интерьерная рукодельная кукла &#171Зайчик&#187, созданию которой посвящена <a href="#0" class="product-text-link">весенняя серия постов</a> в блоге и несколько подкастов.</span>
-      <div class="price-container">
-        <div class="price-item">
-          <span class="price">3500 &#8381</span>
+      <div class="border-item">
+        <h3 class="product-title">Кукла &#171Зайчик&#187</h3>
+        <p class="protuct-text">Интерьерная рукодельная кукла &#171Зайчик&#187, созданию которой посвящена <a href="#0" class="product-text-link">весенняя серия постов</a> в блоге и несколько подкастов.</p>
+        <div class="price-container">
+          <div class="price-item">
+            <span class="price">3500 &#8381</span>
+          </div>
+          <a href="#" class="price-button">В магазин</a>
         </div>
-        <button class="price-button" type="submit">В магазин</button>
       </div>
     </div>
     <div class="product-item">
@@ -335,14 +343,16 @@
           srcset="images/shop-item-mobile3.jpg">
         <img class="image-item" src="images/shop-item-desk3.jpg" srcset="images/shop-item-desk3.jpg"/>
       </picture>
-      <h3 class="product-title">Шестиугольная рамка</h3>
-      <span class="protuct-text">Необычная рамка для украшения дома из видео <a href="#0" class="product-text-link">&#171Как сделать рамку из подручных средств за 30 минут&#187</a></span>
-      <div class="price-container">
-        <div class="price-item">
-          <span class="price-sale">500 &#8381</span>
-          <span class="price">400 &#8381</span>
+      <div class="border-item border-3">
+        <h3 class="product-title">Шестиугольная рамка</h3>
+        <p class="protuct-text">Необычная рамка для украшения дома из видео <a href="#0" class="product-text-link">&#171Как сделать рамку из подручных средств за 30 минут&#187</a></p>
+        <div class="price-container">
+          <div class="price-item">
+            <span class="price-sale">500 &#8381</span>
+            <span class="price">400 &#8381</span>
+          </div>
+          <a href="#" class="price-button">В магазин</a>
         </div>
-        <button class="price-button" type="submit">В магазин</button>
       </div>
     </div>
   </div>
